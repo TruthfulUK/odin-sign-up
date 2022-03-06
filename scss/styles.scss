@@ -1,0 +1,167 @@
+$light-blue: #57B0CC;
+$dark-blue: #184D71;
+$font-thin: 100;
+$font-reg: 400;
+$font-sbold: 600;
+$font-black: 900;
+
+html {
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color: #FFFFFF;
+    
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    color: $light-blue;
+    font-weight: $font-sbold;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.light {
+    font-weight: $font-thin;
+}
+
+.black {
+    font-weight: $font-black;
+    text-decoration: underline;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.hero {
+    background: #000000;
+    background-image: url('../img/hero-bg.jpeg');
+    background-size: 80vh;
+    background-position: center 150px;
+    background-repeat: no-repeat;
+    width: 45vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+
+    h1 {
+        font-weight: $font-black;
+        font-size: 3rem;
+        margin: 100px 0;
+    }
+}
+
+.form {
+    background: #070c0f;
+    width: 65vw;
+    padding: 4rem;
+    font-size: 1.5rem;
+
+    .intro {
+
+        p {
+            margin: 2rem 0;
+
+            &:last-child {
+                padding: 0 0 2rem 0;
+                border-bottom: 1px solid rgba($color: #FFFFFF, $alpha: 0.1)
+            }
+        }
+    }
+
+    form {
+        font-size: 1rem;
+
+        fieldset {
+            display: flex;
+            margin: 2rem 0;
+            padding: 1rem 0;
+            border: 0;
+        }
+
+        input {
+            background: #000;
+            padding: 0.75rem;
+            border-radius: 10px;
+            border: 3px solid #000;
+            color: #fff;
+            outline: none;
+
+            &:active, &:focus, &:focus-visible {
+                border: 3px solid $light-blue;
+            }
+        }
+
+        input + input {
+            margin: 0 0 0 1.5rem;
+        }
+
+        .submit {
+            margin: 4rem 0;
+            display: flex;
+            align-items: baseline;
+
+            button {
+                background: $light-blue;
+                font-size: 1rem;
+                color: #FFFFFF;
+                font-weight: $font-black;
+                padding: 1rem 2rem;
+                border: 0;
+                border-radius: 10px;
+                cursor: pointer;
+
+                &:hover {
+                    background: $dark-blue;
+                    transition: background 0.2s;
+                }
+            }
+
+            p {
+                margin: 0 2rem;
+            }
+        }
+
+    }
+    
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .hero {
+        min-height: 30vh;
+        width: 100vw;
+    }
+    .form {
+        width: 100vw;
+        padding: 1rem;
+
+        .intro {
+            padding: 2rem 0;
+            p {
+                margin: 0;
+            }
+            p + p {
+                margin: 2rem 0;
+            }
+        }
+        form {
+            fieldset {
+                margin: 1rem 1rem 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,171 @@
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  color: #FFFFFF;
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: #57B0CC;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.light {
+  font-weight: 100;
+}
+
+.black {
+  font-weight: 900;
+  text-decoration: underline;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.hero {
+  background: #000000;
+  background-image: url("../img/hero-bg.jpeg");
+  background-size: 80vh;
+  background-position: center 150px;
+  background-repeat: no-repeat;
+  width: 45vw;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.hero h1 {
+  font-weight: 900;
+  font-size: 3rem;
+  margin: 100px 0;
+}
+
+.form {
+  background: #070c0f;
+  width: 65vw;
+  padding: 4rem;
+  font-size: 1.5rem;
+}
+
+.form .intro p {
+  margin: 2rem 0;
+}
+
+.form .intro p:last-child {
+  padding: 0 0 2rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.form form {
+  font-size: 1rem;
+}
+
+.form form fieldset {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 2rem 0;
+  padding: 1rem 0;
+  border: 0;
+}
+
+.form form input {
+  background: #000;
+  padding: 0.75rem;
+  border-radius: 10px;
+  border: 3px solid #000;
+  color: #fff;
+  outline: none;
+}
+
+.form form input:active, .form form input:focus, .form form input:focus-visible {
+  border: 3px solid #57B0CC;
+}
+
+.form form input + input {
+  margin: 0 0 0 1.5rem;
+}
+
+.form form .submit {
+  margin: 4rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+.form form .submit button {
+  background: #57B0CC;
+  font-size: 1rem;
+  color: #FFFFFF;
+  font-weight: 900;
+  padding: 1rem 2rem;
+  border: 0;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.form form .submit button:hover {
+  background: #184D71;
+  -webkit-transition: background 0.2s;
+  transition: background 0.2s;
+}
+
+.form form .submit p {
+  margin: 0 2rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .hero {
+    min-height: 30vh;
+    width: 100vw;
+  }
+  .form {
+    width: 100vw;
+    padding: 1rem;
+  }
+  .form .intro {
+    padding: 2rem 0;
+  }
+  .form .intro p {
+    margin: 0;
+  }
+  .form .intro p + p {
+    margin: 2rem 0;
+  }
+  .form form fieldset {
+    margin: 1rem 1rem 0;
+  }
+}
